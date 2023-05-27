@@ -10,14 +10,14 @@ resource "aws_instance" "Amazon-Linux-App" {
   # count                  = 1
   key_name = "Kitskat2023"
 
-  # https://cloudkatha.com/how-to-install-apache-web-server-on-amazon-linux-2/?utm_content=cmp-true
+  #   # https://cloudkatha.com/how-to-install-apache-web-server-on-amazon-linux-2/?utm_content=cmp-true
 
-  # Update the latest package available on the system
-  # Install Apache Web Server
-  # Start Apache Server
-  # The above command will install the apache web server but it will not start it. You need to explicitly start the server using the below command
-  # Configure Apache to run on system boot
-  # You can do so by the below command
+  #   # Update the latest package available on the system
+  #   # Install Apache Web Server
+  #   # Start Apache Server
+  #   # The above command will install the a/pache web server but it will not start it. You need to explicitly start the server using the below command
+  #   # Configure Apache to run on system boot
+  #   # You can do so by the below command
 
   user_data = <<EOF
 #!/bin/bash
