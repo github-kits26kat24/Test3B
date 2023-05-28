@@ -4,7 +4,6 @@ resource "aws_lb" "test3b_load_balancer" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.testcase_sg.id]
- # availability_zones = ["eu-west-1a", "eu-west-1b"]
   subnets            = [aws_subnet.Amazon_Linux_main.id, aws_subnet.ubuntu_main.id]
 
   enable_deletion_protection = false
@@ -20,7 +19,7 @@ resource "aws_lb_listener" "test3b_front_end" {
     type             = "forward"
     target_group_arn = aws_lb_target_group.test3b.arn
   }
-}
+ }
 resource "aws_lb_target_group" "test3b" {
   name     = "Test3B-lb-tg-Amazon-Linux"
   port     = 80

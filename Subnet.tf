@@ -1,7 +1,6 @@
 # Creating A Subnet 
 # Resource: aws_subnet
 # https://registry.terraform.io/providers/hashicorp/aws/3.73.0/docs/resources/subnet
-
 resource "aws_subnet" "Amazon_Linux_main" {
   vpc_id                  = aws_vpc.testcase_main.id
   cidr_block              = "10.0.1.0/24"
